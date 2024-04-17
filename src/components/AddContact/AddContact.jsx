@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types'
 
 export const AddContact = ({ contacts, setContacts }) => {
     const [name, setName] = useState('');
@@ -58,3 +59,9 @@ export const AddContact = ({ contacts, setContacts }) => {
     </form>
     );
 };
+
+
+AddContact.propTypes = {
+    contacts: PropTypes.array.isRequired,
+    setContacts: PropTypes.func,
+}
