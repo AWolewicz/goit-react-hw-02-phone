@@ -1,5 +1,7 @@
 import { useState } from "react";
 import PropTypes from 'prop-types'
+import { nanoid } from "nanoid";
+
 
 export const AddContact = ({ contacts, setContacts }) => {
     const [name, setName] = useState('');
@@ -23,7 +25,7 @@ export const AddContact = ({ contacts, setContacts }) => {
         }
 
     const newContact = {
-        id: `id-${contacts.length + 1}`,
+        id: nanoid(),
         name,
         number
     };
